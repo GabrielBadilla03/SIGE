@@ -9,10 +9,12 @@ namespace SIGE.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int CodMateriaProfesor { get; set; }
 
+
         [Required(ErrorMessage = "Es necesario seleccionar una materia")]
-        public int Materia { get; set; }
+        public required int Materia { get; set; }
+
         [ForeignKey(nameof(Materia))]  
-        public Materia MateriaFK { get; set; } = default!;
+        public required Materia MateriaFK { get; set; }
 
 
         [Required(ErrorMessage = "Es necesario seleccionar un profesor@")]
@@ -20,6 +22,12 @@ namespace SIGE.Models
         public string Profesor { get; set; } = default!;
 
         [ForeignKey(nameof(Profesor))]
-        public ApplicationUser ProfesorFK { get; set; } = default!;
+        public required ApplicationUser ProfesorFK { get; set; }
+
+
+        public int? Aula { get; set; }
+
+        [ForeignKey(nameof(Aula))]
+        public Aula? AulaFK { get; set; }
     }
 }

@@ -3,15 +3,15 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SIGE.Models
 {
-    public class Materia
+    public class Aula
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int CodMateria { get; set; }
+        public int CodAula { get; set; }
 
 
-        [Required(ErrorMessage = "El nombre de la materia es obligatorio")]
+        [Required(ErrorMessage = "El nombre del aula es obligatorio")]
         [StringLength(50, ErrorMessage = "El nombre no puede tener más de 50 caracteres")]
-        public required string NomMateria { get; set; }
+        public required string NomAula { get; set; }
     }
 }
