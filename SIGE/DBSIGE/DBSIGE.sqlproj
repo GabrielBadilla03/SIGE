@@ -56,5 +56,37 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\TiemposLibres.sql" />
+    <Build Include="dbo\Tables\PeriodosEvaluaciones.sql" />
+    <Build Include="dbo\Tables\Periodos.sql" />
+    <Build Include="dbo\Tables\MatsPorDiaHorario.sql" />
+    <Build Include="dbo\Tables\MateriasProfesores.sql" />
+    <Build Include="dbo\Tables\Materias.sql" />
+    <Build Include="dbo\Tables\HorasMaterias.sql" />
+    <Build Include="dbo\Tables\HorariosTiemposLibres.sql" />
+    <Build Include="dbo\Tables\Grupos.sql" />
+    <Build Include="dbo\Tables\Evaluaciones.sql" />
+    <Build Include="dbo\Tables\Estudiantes.sql" />
+    <Build Include="dbo\Tables\DiasSemana.sql" />
+    <Build Include="dbo\Tables\DiasHorarios.sql" />
+    <Build Include="dbo\Tables\Calificaciones.sql" />
+    <Build Include="dbo\Tables\Aulas.sql" />
+    <Build Include="dbo\Tables\AspNetUserTokens.sql" />
+    <Build Include="dbo\Tables\AspNetUsers.sql" />
+    <Build Include="dbo\Tables\AspNetUserRoles.sql" />
+    <Build Include="dbo\Tables\AspNetUserLogins.sql" />
+    <Build Include="dbo\Tables\AspNetUserClaims.sql" />
+    <Build Include="dbo\Tables\AspNetRoles.sql" />
+    <Build Include="dbo\Tables\AspNetRoleClaims.sql" />
+    <Build Include="dbo\Tables\AsistenciasMaterias.sql" />
+    <Build Include="dbo\Tables\AsistenciasEstudiantes.sql" />
+    <Build Include="dbo\Tables\Asistencias.sql" />
+    <Build Include="dbo\Tables\Asignaciones.sql" />
+    <Build Include="dbo\Tables\ArchivosEvaluacion.sql" />
+    <Build Include="dbo\Tables\__EFMigrationsHistory.sql" />
   </ItemGroup>
 </Project>

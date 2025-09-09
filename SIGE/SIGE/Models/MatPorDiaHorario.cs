@@ -11,10 +11,10 @@ namespace SIGE.Models
 
 
         [Required(ErrorMessage = "La materia y profesor es obligatorio")]
-        public int MateriaPorfesor { get; set; }
+        public int MateriaProfesor { get; set; }
 
-        [ForeignKey(nameof(MateriaPorfesor))]
-        public required MateriaProfesor MateriaPorfesorFK { get; set; }
+        [ForeignKey(nameof(MateriaProfesor))]
+        public required MateriaProfesor MateriaProfesorFK { get; set; }
 
 
         [Required(ErrorMessage = "El dia del horario es obligatorio")]
