@@ -3,18 +3,18 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SIGE.Models
 {
-    public class HorariosTiempoLibre
+    public class HorarioTiempoLibre
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int CodHorariosTiempoLibre { get; set; }
+        public int CodHorarioTiempoLibre { get; set; }
 
 
         [Required(ErrorMessage = "El dia del horario es obligatorio")]
-        public int DiasHorario { get; set; }
+        public int DiaHorario { get; set; }
 
-        [ForeignKey(nameof(DiasHorario))]
-        public required DiasHorario DiasHorarioFK { get; set; }
+        [ForeignKey(nameof(DiaHorario))]
+        public required DiaHorario DiaHorarioFK { get; set; }
 
 
         [Required(ErrorMessage = "El tiempo libre es obligatorio")]

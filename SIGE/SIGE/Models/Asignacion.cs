@@ -3,11 +3,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SIGE.Models
 {
-    public class Asignaciones
+    public class Asignacion
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int CodAsignaciones { get; set; }
+        public int CodAsignacion { get; set; }
 
 
         [Required(ErrorMessage = "El perido y evaluacion es obligatorio")]
@@ -29,6 +29,12 @@ namespace SIGE.Models
 
         [ForeignKey(nameof(Grupo))]
         public required Grupo GrupoFk { get; set; }
+
+
+        public int? ArchivoEvaluacion { get; set; }
+
+        [ForeignKey(nameof(ArchivoEvaluacion))]
+        public ArchivoEvaluacion? ArchivosEvaluacionFk { get; set; }
 
 
         [Required(ErrorMessage = "El numero de evaluacion es obligatorio")]

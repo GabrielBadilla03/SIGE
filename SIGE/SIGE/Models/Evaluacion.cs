@@ -3,11 +3,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SIGE.Models
 {
-    public class Evaluaciones
+    public class Evaluacion
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int CodEvaluaciones { get; set; }
+        public int CodEvaluacion { get; set; }
 
 
         [Required(ErrorMessage = "Es olbigatorio el nombre de la asignacion")]
@@ -16,7 +16,7 @@ namespace SIGE.Models
 
 
         [Required(ErrorMessage = "El valor de la evaluacion es obligatorio")]
-        [Range(0, 100, ErrorMessage = "El valor de la evaluacion debe estar entre 0 y 100")]
+        [Range(1, 100, ErrorMessage = "El valor de la evaluacion debe estar entre 1 y 100")]
         public int Valor { get; set; }
     }
 }

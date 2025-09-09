@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SIGE.Models
 {
-    public class MateriasProfesor
+    public class MateriaProfesor
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

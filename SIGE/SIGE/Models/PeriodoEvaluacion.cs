@@ -11,10 +11,10 @@ namespace SIGE.Models
 
 
         [Required(ErrorMessage = "La evaluacion es obligatorio")]
-        public int Evaluaciones { get; set; }
+        public int Evaluacion { get; set; }
 
-        [ForeignKey(nameof(Evaluaciones))]
-        public required Evaluaciones EvaluacionesFK { get; set; }
+        [ForeignKey(nameof(Evaluacion))]
+        public required Evaluacion EvaluacionFK { get; set; }
 
 
         [Required(ErrorMessage = "El periodo es obligatorio")]

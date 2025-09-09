@@ -3,11 +3,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SIGE.Models
 {
-    public class DiasHorario
+    public class DiaHorario
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int CodDiasHorario { get; set; }
+        public int CodDiaHorario { get; set; }
 
 
         [Required(ErrorMessage = "Se requiere seleccionar un turno escolar")]
