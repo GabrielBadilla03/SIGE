@@ -1,0 +1,39 @@
+﻿@model SIGE.Models.HorarioTiempoLibre
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>HorarioTiempoLibre</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="CodHorarioTiempoLibre" />
+            <div class="form-group">
+                <label asp-for="DiaHorario" class="control-label"></label>
+                <select asp-for="DiaHorario" class="form-control" asp-items="ViewBag.DiaHorario"></select>
+                <span asp-validation-for="DiaHorario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TiempoLibre" class="control-label"></label>
+                <select asp-for="TiempoLibre" class="form-control" asp-items="ViewBag.TiempoLibre"></select>
+                <span asp-validation-for="TiempoLibre" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

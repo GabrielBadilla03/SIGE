@@ -1,0 +1,36 @@
+﻿@model SIGE.Models.AsistenciaEstudiante
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>AsistenciaEstudiante</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AsistenciaFk)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AsistenciaFk.CodAsistencia)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EstudianteFk)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EstudianteFk.Apellido1)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Asistio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Asistio)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.CodAsistenciaEstudiante">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

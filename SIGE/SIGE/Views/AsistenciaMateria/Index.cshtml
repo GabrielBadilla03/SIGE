@@ -1,0 +1,47 @@
+﻿@model IEnumerable<SIGE.Models.AsistenciaMateria>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MatPorDiaHorarioFK)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AsistenciaEstudianteFk)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Asistio)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MatPorDiaHorarioFK.CodMatPorDiaHorario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AsistenciaEstudianteFk.CodAsistenciaEstudiante)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Asistio)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CodAsistenciaMateria">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CodAsistenciaMateria">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CodAsistenciaMateria">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

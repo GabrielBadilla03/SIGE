@@ -1,0 +1,71 @@
+﻿@model IEnumerable<SIGE.Models.ArchivoEvaluacion>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProfesorFK)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EvaluacionFK)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Grado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RutaRelativa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreOriginal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContentType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TamanoBytes)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProfesorFK.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EvaluacionFK.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Grado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RutaRelativa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreOriginal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContentType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TamanoBytes)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CodArchivosEvaluacion">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CodArchivosEvaluacion">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CodArchivosEvaluacion">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

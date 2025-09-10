@@ -1,0 +1,61 @@
+﻿@model SIGE.Models.Grupo
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Grupo</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Seccion" class="control-label"></label>
+                <input asp-for="Seccion" class="form-control" />
+                <span asp-validation-for="Seccion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Grado" class="control-label"></label>
+                <input asp-for="Grado" class="form-control" />
+                <span asp-validation-for="Grado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CapacidadMaxima" class="control-label"></label>
+                <input asp-for="CapacidadMaxima" class="form-control" />
+                <span asp-validation-for="CapacidadMaxima" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AñoLectivo" class="control-label"></label>
+                <input asp-for="AñoLectivo" class="form-control" />
+                <span asp-validation-for="AñoLectivo" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Estado" /> @Html.DisplayNameFor(model => model.Estado)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Aula" class="control-label"></label>
+                <select asp-for="Aula" class ="form-control" asp-items="ViewBag.Aula"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Profesor" class="control-label"></label>
+                <select asp-for="Profesor" class ="form-control" asp-items="ViewBag.Profesor"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
