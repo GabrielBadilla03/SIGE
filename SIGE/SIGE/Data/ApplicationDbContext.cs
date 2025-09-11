@@ -37,6 +37,26 @@ namespace SIGE.Data
         {
             base.OnModelCreating(modelBuilder);
 
+            // Índices únicos (recomendado para evitar duplicados manuales)
+            modelBuilder.Entity<DiaSemana>()
+                .HasIndex(d => d.Nombre)
+                .IsUnique();
+
+            modelBuilder.Entity<DiaSemana>()
+                .HasIndex(d => d.Nomenclatura)
+                .IsUnique();
+
+            // Seed de días de la semana (solo una vez via migración)
+            modelBuilder.Entity<DiaSemana>().HasData(
+                new DiaSemana { CodDiaSemana = 1, Nombre = "Lunes", Nomenclatura = "L" },
+                new DiaSemana { CodDiaSemana = 2, Nombre = "Martes", Nomenclatura = "K" },
+                new DiaSemana { CodDiaSemana = 3, Nombre = "Miércoles", Nomenclatura = "M" },
+                new DiaSemana { CodDiaSemana = 4, Nombre = "Jueves", Nomenclatura = "J" },
+                new DiaSemana { CodDiaSemana = 5, Nombre = "Viernes", Nomenclatura = "V" },
+                new DiaSemana { CodDiaSemana = 6, Nombre = "Sábado", Nomenclatura = "S" },
+                new DiaSemana { CodDiaSemana = 7, Nombre = "Domingo", Nomenclatura = "D" }
+            );
+
             // 1) NO borrar Grupos cuando se borra Aula (bloquea el borrado si hay Grupos)
             modelBuilder.Entity<Grupo>()
                 .HasOne(g => g.AulaFK)

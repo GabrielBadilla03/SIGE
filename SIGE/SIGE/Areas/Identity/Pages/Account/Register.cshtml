@@ -17,15 +17,55 @@
                 <label asp-for="Input.Email">Email</label>
                 <span asp-validation-for="Input.Email" class="text-danger"></span>
             </div>
+
             <div class="form-floating mb-3">
                 <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
                 <label asp-for="Input.Password">Password</label>
                 <span asp-validation-for="Input.Password" class="text-danger"></span>
             </div>
+
             <div class="form-floating mb-3">
                 <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
                 <label asp-for="Input.ConfirmPassword">Confirm Password</label>
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+            </div>
+
+            <!-- ===== Campos personalizados debajo, mismo estilo ===== -->
+
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Nombre" class="form-control" placeholder="Nombre" />
+                <label asp-for="Input.Nombre"></label>
+                <span asp-validation-for="Input.Nombre" class="text-danger"></span>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Apellido1" class="form-control" placeholder="Primer apellido" />
+                <label asp-for="Input.Apellido1"></label>
+                <span asp-validation-for="Input.Apellido1" class="text-danger"></span>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Apellido2" class="form-control" placeholder="Segundo apellido" />
+                <label asp-for="Input.Apellido2"></label>
+                <span asp-validation-for="Input.Apellido2" class="text-danger"></span>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Cedula" class="form-control" placeholder="Cédula" />
+                <label asp-for="Input.Cedula"></label>
+                <span asp-validation-for="Input.Cedula" class="text-danger"></span>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input asp-for="Input.Direccion" class="form-control" placeholder="Dirección" />
+                <label asp-for="Input.Direccion"></label>
+                <span asp-validation-for="Input.Direccion" class="text-danger"></span>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input asp-for="Input.PhoneNumber" class="form-control" autocomplete="tel" placeholder="Teléfono" />
+                <label asp-for="Input.PhoneNumber"></label>
+                <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
             </div>
             <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
         </form>
